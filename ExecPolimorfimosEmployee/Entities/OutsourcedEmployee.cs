@@ -17,11 +17,15 @@ namespace ExecPolimorfimosEmployee.Entities
             AdditionalCharge = additionalCharge;
         }
 
+        public OutsourcedEmployee(string name, int hours, double valuePerHour) : base(name, hours, valuePerHour)
+        {
+        }
+
         public sealed override double Payament()
         {
-            double salary = base.Payament();
+            double salary = ValuePerHour*Hours;
 
-            salary += ((AdditionalCharge * 1.10) + AdditionalCharge);
+            salary += (AdditionalCharge * 1.10);
 
             return salary;
         }
