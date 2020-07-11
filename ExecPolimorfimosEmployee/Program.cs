@@ -41,7 +41,7 @@ namespace ExecPolimorfimosEmployee
             foreach (Employee employee in listEmployee)
             {
 
-                Console.WriteLine(employee.Name + " - $" + employee.Payament());
+                Console.WriteLine(employee.Name + " - $" + employee.Payament().ToString("F2",CultureInfo.InvariantCulture));
                 
             }
 
